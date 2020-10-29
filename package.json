@@ -6,7 +6,7 @@
 	"engines": {
 		"node": "14.x"
 	},
-  "dependencies": {
+	"dependencies": {
 		"axios": "^0.21.0",
 		"body-parser": "^1.19.0",
 		"cors": "^2.8.5",
@@ -15,7 +15,8 @@
 		"morgan": "^1.10.0",
 		"nodemon": "^2.0.6"
 	},
-  "scripts": {
-		"start": "node index.js"
+	"scripts": {
+		"start": "node index.js",
+		"heroku-postbuild": "cd client && yarn && expo build"
 	}
 }

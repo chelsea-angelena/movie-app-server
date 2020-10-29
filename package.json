@@ -16,7 +16,6 @@
 		"nodemon": "^2.0.6"
 	},
 	"scripts": {
-		"start": "node index.js",
-		"heroku-postbuild": "cd client && yarn && yarn run build"
+		"start": "node index.js"
 	}
 }

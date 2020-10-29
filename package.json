@@ -17,6 +17,6 @@
 	},
 	"scripts": {
 		"start": "node index.js",
-		"heroku-postbuild": "cd client && yarn && expo build"
+		"heroku-postbuild": "cd client && yarn && yarn run build"
 	}
 }

@@ -5,7 +5,8 @@ import FormButton from '../screens/Auth/FormButton';
 import DataList from '../components/searchscreen/DataList';
 import colors from '../styles/colors';
 import AppText from '../components/Text.js';
-import api from '../api/api';
+// import api from '../api/api';
+import axios from 'axios';
 
 const MySearchBar = () => {
 	const [searchInput, setSearchInput] = useState('');
@@ -19,7 +20,7 @@ const MySearchBar = () => {
 
 	const submitSearch = async () => {
 		try {
-			let response = await api.get(`/api/movies/${searchTerm}`);
+			let response = await axios.get(`/api/movies/${searchTerm}`);
 			setMovies(response.data.Search);
 		} catch (e) {
 			setError(e);

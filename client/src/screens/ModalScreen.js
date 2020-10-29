@@ -33,7 +33,7 @@ export default function ModalScreen(props, { item, route }) {
 
 	const getmovie = async () => {
 		try {
-			let result = await api.get(`/api/${id}`);
+			let result = await axios.get(`/api/${id}`);
 			setmovie(result.data);
 		} catch (e) {
 			setError(e);
@@ -52,17 +52,15 @@ export default function ModalScreen(props, { item, route }) {
 	}
 
 	return (
-
-			<MovieDetails
-				error={error}
-				loading={loading}
-				userId={userId}
-				imdbID={id}
-				movie={movie}
-				setButton={setButton}
-				button={button}
-				navigation={navigation}
-			/>
-
+		<MovieDetails
+			error={error}
+			loading={loading}
+			userId={userId}
+			imdbID={id}
+			movie={movie}
+			setButton={setButton}
+			button={button}
+			navigation={navigation}
+		/>
 	);
 }
